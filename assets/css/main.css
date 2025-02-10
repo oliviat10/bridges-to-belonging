@@ -166,6 +166,14 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
+	.zine-page-header {
+		margin-bottom: 0;
+	}
+
+	.menu-title {
+		margin-bottom: 0.25rem;
+	}
+
 	h1 {
 		font-size: 2.75em;
 		font-weight: 700;
@@ -313,6 +321,15 @@ input, select, textarea {
 	}
 
 /* Row */
+
+	.ri-download-fill {
+		vertical-align: middle;
+		font-size:0.5em;
+	}
+
+	.download-link {
+		border-bottom:none;
+	}
 
 	.row {
 		display: flex;
@@ -2583,7 +2600,7 @@ input, select, textarea {
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			position: relative;
 			width: calc(33.33333% - 2.5em);
-			height: 20em;
+			height: 23em;
 			margin: 2.5em 0 0 2.5em;
 		}
 
@@ -2945,23 +2962,12 @@ input, select, textarea {
 				}
 
 
-		@media screen and (max-width: 736px) {
-
-			#header {
-				padding: 4em 0 0.1em 0 ;
-			}
-
-				#header nav {
-					right: 0.5em;
-					top: 0.5em;
-				}
-
-		}
+		
 
 /* Menu */
 
 #wrapper {
-    margin-left: 20em; /* Same width as the menu */
+    margin-left: 15em; /* Same width as the menu */
     transition: none;
 }
 
@@ -2969,7 +2975,7 @@ input, select, textarea {
     position: fixed;
     top: 4em;
     left: 0;
-    width: 20em; /* Adjust width as needed */
+    width: 15em; /* Adjust width as needed */
     height: 100%;
     background: #ffffff;
     color: #585858;
@@ -2982,6 +2988,7 @@ input, select, textarea {
 /* Adjust the inner content */
 #menu > .inner {
     padding: 2.75em;
+	padding-right: 0;
     opacity: 1;
 }
 
