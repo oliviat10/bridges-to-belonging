@@ -181,7 +181,7 @@
 })(jQuery);
 
 /*document.addEventListener("DOMContentLoaded", function () {
-    const pdfBaseURL = "zine pdfs/vol-1.pdf#page="; // Base URL of the PDF
+    const pdfBaseURL = "zine pdfs/Yinzers on Third Places.pdf#page="; // Base URL of the PDF
     const pdfViewerPopup = document.getElementById("pdf-viewer-popup");
     const pdfFrame = document.getElementById("pdf-frame");
 
@@ -217,7 +217,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let currentPage = 1;
     const totalPages = 4;
-    const pdfBaseURL = "zine pdfs/vol-1.pdf#page=";
+    const pdfBaseURL = "zine pdfs/Yinzers on Third Places.pdf#page=";
     const pdfViewerPopup = document.getElementById("pdf-viewer-popup");
     const pdfFrame = document.getElementById("pdf-frame");
 
