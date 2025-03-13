@@ -56,19 +56,20 @@
 		<nav id="menu">
 			<h2 class="menu-title">Authors</h2>
 			<ul>
-				<li><a href="">Anonymous</a></li>
-				<li><a href="">Ange Pho</a></li>
-				<li><a href="">Andy</a></li>
-				<li><a href="">Erica Vanderheid</a></li>
-				<li><a href="">Gale</a></li>
-				<li><a href="">Gianna Leonard</a></li>
-				<li><a href="">Katie Kaage</a></li>
-				<li><a href="">Kurt Carlson</a></li>
-				<li><a href="">Maia McCabe</a></li>
-				<li><a href="">Marcus Vanderheid</a></li>
-				<li><a href="">Maria Serbanescu</a></li>
-				<li><a href="">Nick Pho</a></li>
-				<li><a href="">Vasu Magesh</a></li>
+				<li class="page-item jump-page-zine"><a href="#anonymous-1" data-page="1">Anonymous 1</a></li>
+				<li class="page-item jump-page-zine"><a href="#anonymous-2" data-page="3">Anonymous 2</a></li>
+				<li class="page-item jump-page-zine"><a href="#ange" data-page="1">Ange Pho</a></li>
+				<li class="page-item jump-page-zine"><a href="#andy" data-page="3">Andy</a></li>
+				<li class="page-item jump-page-zine"><a href="#erica" data-page="1">Erica Vanderheid</a></li>
+				<li class="page-item jump-page-zine"><a href="#gale" data-page="3">Gale</a></li>
+				<li class="page-item jump-page-zine"><a href="#gianna" data-page="2">Gianna Leonard</a></li>
+				<li class="page-item jump-page-zine"><a href="#kt" data-page="2">Katie Kaage</a></li>
+				<li class="page-item jump-page-zine"><a href="#kurt" data-page="4">Kurt Carlson</a></li>
+				<li class="page-item jump-page-zine"><a href="#maia" data-page="3">Maia McCabe</a></li>
+				<li class="page-item jump-page-zine"><a href="#marcus" data-page="1">Marcus Vanderheid</a></li>
+				<li class="page-item jump-page-zine"><a href="#maria" data-page="2">Maria Serbanescu</a></li>
+				<li class="page-item jump-page-zine"><a href="#nick" data-page="2">Nick Pho</a></li>
+				<li class="page-item jump-page-zine"><a href="#vasu" data-page="2">Vasu Magesh</a></li>
 			</ul>
 		</nav>
 
@@ -77,7 +78,7 @@
 			<div class="inner">
 				<span>VOLUME I</span>
 				<h1 class="zine-page-header">Yinzers on Third Places &nbsp;
-					<a class="download-link" href="zine pdfs/Yinzers on Third Places.pdf" target="_blank"><i
+					<a class="download-link" href="zine pdfs/Yinzers on Third Places.pdf#page=1" target="_blank"><i
 							class="ri-download-fill"></i></a>
 				</h1>
 				<h3>November 2024</h3>
@@ -112,7 +113,7 @@
 
 
 				<section class="zine-contents" id="zine-contents">
-					<div class="zine">
+					<div class="zine" id="cover-intro">
 						<div class="zine-row" data-page="1">
 							<a class="zine-page-link" href="#" data-pdf-page="1"><img src="images/vol-1/cover1.png"
 									class="zine-page vertical" alt="Volume 1 Cover"></a>
@@ -124,7 +125,7 @@
 					</div>
 
 
-					<div class="zine">
+					<div class="zine" id="erica">
 						<div class="zine-row" data-page="1">
 							<a class="zine-page-link" href="#" data-pdf-page="5"><img src="images/vol-1/erica.png"
 									class="zine-page vertical" alt="Erica's Zine"></a>
@@ -134,7 +135,7 @@
 					</div>
 
 
-					<div class="zine">
+					<div class="zine" id="marcus">
 						<div class="zine-row" data-page="1">
 							<a class="zine-page-link" href="#" data-pdf-page="7"><img src="images/vol-1/marcus-1.png"
 									class="zine-page vertical" alt="Marcus Zine"></a>
@@ -151,7 +152,7 @@
 					</div>
 
 
-					<div class="zine">
+					<div class="zine" id="ange">
 						<div class="zine-row" data-page="1">
 							<a class="zine-page-link" href="#" data-pdf-page="14"><img src="images/vol-1/ange.png"
 									class="zine-page horizontal" alt="Ange's Zine"></a>
@@ -162,7 +163,7 @@
 					</div>
 
 
-					<div class="zine">
+					<div class="zine" id="anonymous-1">
 						<div class="zine-row" data-page="1">
 							<a class="zine-page-link" href="#" data-pdf-page="18"><img src="images/vol-1/anon-1.png"
 									class="zine-page horizontal small" alt="Anonymous Zine"></a>
@@ -178,7 +179,7 @@
 					</div>
 
 
-					<div class="zine">
+					<div class="zine" id="maria">
 						<div class="zine-row" data-page="2">
 							<a class="zine-page-link" href="#" data-pdf-page="25"><img src="images/vol-1/maria-1.png"
 									class="zine-page vertical" alt="Maria's Zine"></a>
@@ -195,22 +196,32 @@
 						<span>by Maria Serbanescu</span>
 					</div>
 
-
-					<div class="zine">
+					<div class="zine" id="gianna">
 						<div class="zine-row" data-page="2">
-							<a class="zine-page-link" href="#" data-pdf-page="33"><img src="images/vol-1/kt-1.png"
+							<a class="zine-page-link" href="#" data-pdf-page="33"><img src="images/vol-1/gianna.png"
+									class="zine-page vertical" alt="Gianna's Zine"></a>
+
+						</div>
+						<span><strong>Cider Fest</strong></span><br>
+						<span>by Gianna Leonard</span>
+					</div>
+
+
+					<div class="zine" id="kt">
+						<div class="zine-row" data-page="2">
+							<a class="zine-page-link" href="#" data-pdf-page="35"><img src="images/vol-1/kt-1.png"
 									class="zine-page vertical" alt="Katie's Zine"></a>
-							<a class="zine-page-link" href="#" data-pdf-page="34"><img src="images/vol-1/kt-2.png"
+							<a class="zine-page-link" href="#" data-pdf-page="36"><img src="images/vol-1/kt-2.png"
 									class="zine-page vertical" alt="Katie's Zine"></a>
-							<a class="zine-page-link" href="#" data-pdf-page="35"><img src="images/vol-1/kt-3.png"
+							<a class="zine-page-link" href="#" data-pdf-page="37"><img src="images/vol-1/kt-3.png"
 									class="zine-page vertical" alt="Katie's Zine"></a>
-							<a class="zine-page-link" href="#" data-pdf-page="36"><img src="images/vol-1/kt-4.png"
+							<a class="zine-page-link" href="#" data-pdf-page="38"><img src="images/vol-1/kt-4.png"
 									class="zine-page vertical" alt="Katie's Zine"></a>
-							<a class="zine-page-link" href="#" data-pdf-page="37"><img src="images/vol-1/kt-5.png"
+							<a class="zine-page-link" href="#" data-pdf-page="39"><img src="images/vol-1/kt-5.png"
 									class="zine-page vertical" alt="Katie's Zine"></a>
-							<a class="zine-page-link" href="#" data-pdf-page="38"><img src="images/vol-1/kt-6.png"
+							<a class="zine-page-link" href="#" data-pdf-page="40"><img src="images/vol-1/kt-6.png"
 									class="zine-page vertical" alt="Katie's Zine"></a>
-							<a class="zine-page-link" href="#" data-pdf-page="39"><img src="images/vol-1/kt-7.png"
+							<a class="zine-page-link" href="#" data-pdf-page="41"><img src="images/vol-1/kt-7.png"
 									class="zine-page vertical" alt="Katie's Zine"></a>
 						</div>
 						<span><strong>Whimsy</strong></span><br>
@@ -218,7 +229,7 @@
 					</div>
 
 
-					<div class="zine">
+					<div class="zine" id="nick">
 						<div class="zine-row" data-page="2">
 							<a class="zine-page-link" href="#" data-pdf-page="41"><img src="images/vol-1/nick.png"
 									class="zine-page vertical" alt="Nick's Zine"></a>
@@ -229,7 +240,7 @@
 					</div>
 
 
-					<div class="zine">
+					<div class="zine" id="vasu">
 						<div class="zine-row" data-page="2">
 							<a class="zine-page-link" href="#" data-pdf-page="43"><img src="images/vol-1/vasu.png"
 									class="zine-page square" alt="Vasu's Zine"></a>
@@ -240,7 +251,7 @@
 					</div>
 
 
-					<div class="zine">
+					<div class="zine" id="gale">
 						<div class="zine-row" data-page="3">
 							<a class="zine-page-link" href="#" data-pdf-page="43"><img src="images/vol-1/gale-1.png"
 									class="zine-page vertical" alt="Gale's Zine"></a>
@@ -260,7 +271,7 @@
 						<span>by Gale</span>
 					</div>
 
-					<div class="zine">
+					<div class="zine" id="anonymous-2">
 						<div class="zine-row" data-page="3">
 							<a class="zine-page-link" href="#" data-pdf-page="46"><img src="images/vol-1/anon2.png"
 									class="zine-page horizontal" alt="Anonymous Zine"></a>
@@ -271,7 +282,7 @@
 					</div>
 
 
-					<div class="zine">
+					<div class="zine" id="andy">
 						<div class="zine-row" data-page="3">
 							<a class="zine-page-link" href="#" data-pdf-page="46"><img src="images/vol-1/andy-1.png"
 									class="zine-page vertical" alt="Andy's Zine"></a>
@@ -292,7 +303,7 @@
 					</div>
 
 
-					<div class="zine">
+					<div class="zine" id="maia">
 						<div class="zine-row" data-page="3">
 							<a class="zine-page-link" href="#" data-pdf-page="46"><img src="images/vol-1/maia.png"
 									class="zine-page square" alt="Maia's Zine"></a>
@@ -305,7 +316,7 @@
 
 
 
-					<div class="zine">
+					<div class="zine" id="kurt">
 						<div class="zine-row" data-page="4">
 							<a class="zine-page-link" href="#" data-pdf-page="46"><img src="images/vol-1/kurt-1.png"
 									class="zine-page horizontal" alt="Kurt's Zine"></a>
@@ -319,7 +330,7 @@
 						<span>by Kurt Carlson</span>
 					</div>
 
-					<div class="zine">
+					<div class="zine" id="back-cover">
 						<div class="zine-row" data-page="4">
 							<a class="zine-page-link" href="#" data-pdf-page="46"><img
 									src="images/vol-1/acknowledgements-1.png" class="zine-page vertical"
