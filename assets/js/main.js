@@ -220,8 +220,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const pdfBaseURL = "zine pdfs/Yinzers on Third Places.pdf#page=";
     const pdfViewerPopup = document.getElementById("pdf-viewer-popup");
     const pdfFrame = document.getElementById("pdf-frame");
+    let isAutoScrolling = false; // Prevents unwanted scrolling when using pagination
 
-    function showPage(pageNumber) {
+    function showPage(pageNumber, scrollTargetId = null) {
         if (pageNumber < 1 || pageNumber > totalPages) return;
         currentPage = pageNumber;
 
@@ -250,21 +251,32 @@ document.addEventListener("DOMContentLoaded", function () {
         // Sync previous/next buttons in both paginators
         document.querySelectorAll("#prev-page").forEach(prevBtn => {
             prevBtn.style.opacity = pageNumber === 1 ? "0.5" : "1";
-			prevBtn.style.pointerEvents = pageNumber === 1 ? "none" : "auto";
-			prevBtn.style.cursor = pageNumber === 1 ? "default" : "pointer";
+            prevBtn.style.pointerEvents = pageNumber === 1 ? "none" : "auto";
+            prevBtn.style.cursor = pageNumber === 1 ? "default" : "pointer";
         });
 
         document.querySelectorAll("#next-page").forEach(nextBtn => {
             nextBtn.style.opacity = pageNumber === totalPages ? "0.5" : "1";
-			nextBtn.style.pointerEvents = pageNumber === totalPages ? "none" : "auto";
-			nextBtn.style.cursor = pageNumber === totalPages ? "default" : "pointer";
-
+            nextBtn.style.pointerEvents = pageNumber === totalPages ? "none" : "auto";
+            nextBtn.style.cursor = pageNumber === totalPages ? "default" : "pointer";
         });
 
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth"
-		});
+        if (isAutoScrolling && scrollTargetId) {
+            // Scroll smoothly to the specific zine after the page change
+            setTimeout(() => {
+                const targetElement = document.getElementById(scrollTargetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+                isAutoScrolling = false; // Reset after scrolling
+            }, 200);
+        } else {
+            // Default behavior: Scroll to top when switching pages normally
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
     }
 
     // Function to update all pagination elements
@@ -291,6 +303,20 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+
+    // Handle author name clicks
+    document.querySelectorAll(".jump-page-zine a").forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default anchor behavior
+
+            const targetId = this.getAttribute("href").substring(1); // Remove #
+            const targetPage = parseInt(this.getAttribute("data-page"));
+
+            isAutoScrolling = true; // Mark that an author was clicked
+
+            showPage(targetPage, targetId);
+        });
+    });
 
     // Open PDF Viewer with the correct page
     function openPopup(pdfPage) {
@@ -323,5 +349,5 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initialize the first page and attach event listeners
     attachPaginationEventListeners();
     showPage(1);
-
 });
+
