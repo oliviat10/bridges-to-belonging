@@ -214,6 +214,7 @@
     });
 });*/
 
+/*
 document.addEventListener("DOMContentLoaded", function () {
     let currentPage = 1;
     const totalPages = 4;
@@ -351,3 +352,66 @@ document.addEventListener("DOMContentLoaded", function () {
     showPage(1);
 });
 
+*/
+
+document.addEventListener("DOMContentLoaded", function () {
+    const topButton = document.getElementById("top-button");
+  
+    if (!topButton) return;
+  
+    // Show or hide button on scroll
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 1500) {
+        topButton.style.display = "block";
+      } else {
+        topButton.style.display = "none";
+      }
+    });
+  
+    // Smooth scroll to top on click
+    topButton.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+  
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.getElementById("menu");
+    const footer = document.getElementById("footer");
+  
+    function updateMenuPosition() {
+      const menuHeight = menu.offsetHeight;
+      const footerTop = footer.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+  
+      if (footerTop < menuHeight + 40) {
+        menu.classList.add("stop");
+        menu.style.top = `${footer.offsetTop - menuHeight - 40}px`;
+      } else {
+        menu.classList.remove("stop");
+        menu.style.top = "20px";
+      }
+    }
+  
+    window.addEventListener("scroll", updateMenuPosition);
+    window.addEventListener("resize", updateMenuPosition);
+    updateMenuPosition();
+  });
+  
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.getElementById("menu");
+  
+    function checkMenuVisibility() {
+      if (window.scrollY >= 300) { // 4em is about 64px
+        menu.classList.add("visible");
+      } else {
+        menu.classList.remove("visible");
+      }
+    }
+  
+    window.addEventListener("scroll", checkMenuVisibility);
+    checkMenuVisibility(); // run on load just in case
+  });
+  

@@ -83,7 +83,7 @@
 			opacity: 0;
 			overflow: hidden;
 			padding: 0;
-			white-space: nowrap;
+			#ffffff-space: nowrap;
 
 			&:before, &:after {
 				@include vendor('transition', 'opacity #{_duration(transition)} ease');
