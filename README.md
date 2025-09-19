@@ -11,5 +11,5 @@ voices and stories.
 ## Contact Us
 
 * Ange Pho (she/her) / anp275@pitt.edu
-* Olivia Terry (she/her) / ort13@pitt.edu
+* Olivia Terry (she/her) / oliviaterry70@gmail.com
 
