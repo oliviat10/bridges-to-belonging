@@ -191,7 +191,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			h1 {
-				font-size: 2em;
+				font-size: 3em;
 				margin: 0 0 1em 0;
 			}
 
@@ -257,9 +257,7 @@ input, select, textarea {
 
 	@media screen and (max-width: 736px) {
 
-		h2 {
-			font-size: 1em;
-		}
+		
 
 		h3 {
 			font-size: 0.8em;
@@ -2339,11 +2337,26 @@ input, select, textarea {
 
 /* Image */
 
+	.scissors-row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items:center
+	}
+
+	.scissors {
+		width: 150px;
+		height: 50px;
+		margin-left: 5px;
+		margin-bottom: 35px;
+	}
+
 	.image {
 		border-radius: 0px;
 		border: 0;
 		display: inline-block;
 		position: relative;
+		filter: drop-shadow(4px 4px 2px #8d8d8d);
+		padding-top: 2em;
 	}
 
 		.image img {
@@ -2596,22 +2609,72 @@ input, select, textarea {
 		}
 
 		.zine-vol-head {
-			font-style: normal;
-			font-family:"kepler-std-condensed-display", serif;
-			font-size: 1.75em;
+			
+			font-size: 1.5em;
 			font-weight: 500;
 			
 		}
 
 
 		.hero-head {
-			margin-top: 1.75em;
-			width: 80%;
+			margin-top: 0.75em;
+			width: 90%;
+		}
+		@media screen and (max-width: 800px) {
+
+			.hero-head {
+				width: 95%;
+				margin: auto;
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+			}
 		}
 
 		.hero-text {
-			width: 70%;
+			width: 90%;
+			margin-bottom: 0.5em;
 			
+		}
+		@media screen and (max-width: 800px) {
+
+			.hero-text {
+				width: 95%;
+				margin: auto;
+				padding-bottom: 0.5em;
+			}
+		}
+
+
+		.main-page-cols {
+			display: flex;
+		}
+		@media screen and (max-width: 800px) {
+
+			.main-page-cols {
+				display:contents;
+			}
+		}
+
+		.left-col {
+			width: 70%;
+		}
+		@media screen and (max-width: 800px) {
+
+			.left-col {
+				width: 100%;
+			}
+		}
+		.right-col {
+			width: 30%;
+		}
+		@media screen and (max-width: 800px) {
+
+			.right-col {
+				width: 400px;
+				margin: auto;
+				margin-bottom: 200px;
+				
+			}
 		}
 
 /* Tiles */
@@ -2635,7 +2698,7 @@ input, select, textarea {
 			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			position: relative;
-			width: calc(33.33333% - 2.5em);
+			width: 100%;
 			height: 23em;
 			margin: 2.5em 0 0 2.5em;
 			
@@ -2825,7 +2888,7 @@ input, select, textarea {
 			max-height: 15em;
 			opacity: 1;
 		}
-
+/*
 		@media screen and (max-width: 1280px) {
 
 			.tiles {
@@ -2883,13 +2946,14 @@ input, select, textarea {
 					margin: 1.25em 0 0 0;
 				}
 
-		}
+		}*/
 
 /* Header */
 
 	#header {
 		
 		padding-left: 2.5em;
+		
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -2904,7 +2968,7 @@ input, select, textarea {
 		justify-content: space-between;
 		display: inline;
 
-			padding-top: 1em;
+			padding-top: 0.5em;
 		
 	}
 
@@ -2913,8 +2977,8 @@ input, select, textarea {
 	}
 
 	.logo img {
-		width: 12em;
-		height: 4em;
+		width: 17em;
+		height: 5em;
 		margin-top: 0;
 	}
 
@@ -3153,12 +3217,13 @@ input, select, textarea {
 /* Menu */
 
 #wrapper {
-    margin-left: 15em; /* Same width as the menu */
+    margin-left: 0em; /* Same width as the menu */
     transition: none;
 }
 
+
 #menu {
-    position: fixed;
+    position:fixed;
     top: 4em;
     left: 0;
     width: 15em; /* Adjust width as needed */
@@ -3170,6 +3235,12 @@ input, select, textarea {
     transform: none; /* Remove transformation */
     visibility: visible;
 }
+@media screen and (max-width: 800px) {
+
+			#menu {
+				visibility: hidden;
+			}
+		}
 
 /* Adjust the inner content */
 #menu > .inner {
@@ -3194,11 +3265,66 @@ input, select, textarea {
 
 			#main {
 				padding: 0em 0 4em 0 ;
+				
 			}
 
 		}
 
+		#about-main {
+			margin-top: 10em;
+			margin-left: 5em;
+			padding: 0em 0 1em 0 ;
+			width: 70%;
+		}
+		@media screen and (max-width: 800px) {
+
+			#about-main {
+				padding: 0em 0 4em 0 ;
+				margin-left: auto;
+				margin-right: auto;
+				width: 90%;
+				
+			}
+
+		}
+
+		.vol-split {
+			display: flex;
+		}
+
+		.authors-menu {
+			width: 25%;
+			position: sticky;
+			margin-left: 4em;
+			padding-top: 1em;
+			left: 0;
+			height: 100%;
+			background: #ffffff;
+			color: #161616;
+			overflow-y: auto;
+			
+			transform: none; /* Remove transformation */
+			visibility: visible;
+			
+		}
+
+		.vol-1-zine {
+			width: 75%;
+			
+		}
+
+		#vol-1-main {
+		margin-top: 7em;
+		padding: 0em 0 6em 0 ;
+		
+		
+	}
+
 /* Footer */
+
+	.footer-name {
+		font-weight: 500;
+	}
 
 	#footer {
 		padding: 5em 0 6em 0 ;
@@ -3296,7 +3422,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#footer {
-				padding: 3em 0 1em 0 ;
+				padding: 3em 2em 1em 2em ;
 			}
 
 				#footer > .inner {
@@ -3360,6 +3486,7 @@ input, select, textarea {
 
 			#wrapper > * > .inner {
 				padding: 0 1.25em;
+				
 			}
 
 		}
